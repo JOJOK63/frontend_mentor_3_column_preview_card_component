@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  /* box-shadow: 0 0 0 1px red;*/
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white_paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray_background_headings_buttons: hsl(0, 0%, 95%);
+  --Big-Shoulders-Display: "Big Shoulders Display", cursive;
+  --Lexend-Deca: "Lexend Deca", sans-serif;
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--Big-Shoulders-Display);
+}
+
+.card {
+  width: 100%;
+  height: 450px;
+  padding: 20px 50px;
+  background-color: var(--Bright-orange);
+  color: white;
+  border-radius: 10px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100px;
+  background-image: url(images/icon-sedans.svg);
+  background-size: 60px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.card h1 {
+  margin-bottom: 30px;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  font-family: var(--Lexend-Deca);
+  padding-right: 30px;
+  text-shadow: 1px 1px 2px rgba(251, 243, 0, 0.3); /* Ombre autour du texte */
+}
+
+.card button {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  color: var(--Bright-orange);
+  margin-top: 30px;
+  border: none;
+}
+
+.sedans {
+  border-radius: 20px 20px 0 0;
+}
+
+.sedans button:hover {
+  background-color: var(--Bright-orange);
+}
+
+.suvs {
+  background-color: var(--Dark-cyan);
+  border-radius: 0;
+}
+
+.suvs-img {
+  background-image: url(images/icon-suvs.svg);
+}
+
+.suvs button {
+  color: var(--Dark-cyan);
+}
+
+.suvs button:hover {
+  background-color: var(--Dark-cyan);
+}
+
+.luxury {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 0 20px 20px;
+}
+
+.luxury-img {
+  background-image: url(images/icon-luxury.svg);
+}
+
+.luxury button {
+  color: var(--Very-dark-cyan);
+}
+
+.luxury button:hover {
+  background-color: var(--Very-dark-cyan);
+}
+.card button:hover {
+  color: white;
+  border: solid 3px white;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  color: var(--Bright-orange);
+}
+footer a {
+  text-decoration: none;
+  color: var(--Very-dark-cyan);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    display: flex;
+  }
+
+  .card {
+    height: 100%;
+  }
+
+  .card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .sedans {
+    border-radius: 20px 0 0 20px;
+  }
+
+  .luxury {
+    border-radius: 0 20px 20px 0;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
